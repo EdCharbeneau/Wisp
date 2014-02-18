@@ -1,0 +1,5 @@
+{
+  "name": "Wisp lightweight grid",
+  "description": "Ultra lightweight Sass grid mixins; just 783 bytes.",
+  "tags": ["grid", "sass", "responsive", "semantic", "rwd", "heisenberg", "micro-framework"]
+}
