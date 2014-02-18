@@ -1,0 +1,61 @@
+@import "../sass/wisp";
+
+$large-device-width: 768px;
+
+// div { outline: 1px solid blue;}
+
+/* 
+	These styles are for testing only.
+	You should use wisp symantic instead; ex: article, aside
+*/
+h1, h2, h3, h4 {
+    font-size: 14px;
+    padding:20px;
+    background-color:#eee;
+}
+
+// All the things
+.row {
+        @include row;
+        .row {
+            @include row($nested: true);
+        }
+    }
+
+// Default (yay, moble first demo)
+@media only screen {
+    .full,
+    .half,
+    .quarter,
+    .third,
+    .two-thirds,
+    .golden-large,
+    .golden-small {
+		@include column;
+	}
+}
+
+// Large things
+@media only screen and (min-width: $large-device-width) {
+    .full {
+        @include column();
+    }
+    .half {
+        @include column($one-half);
+    }
+    .quarter {
+        @include column($one-quarter);
+    }
+    .third {
+        @include column($one-third);
+    }
+    .two-thirds {
+        @include column($two-thirds);
+    }
+    .golden-large {
+        @include column($golden-large);
+    }
+    .golden-small {
+        @include column($golden-small);
+    }
+}
